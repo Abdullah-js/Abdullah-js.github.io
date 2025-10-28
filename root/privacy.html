@@ -1,36 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>WebShield — Privacy Policy</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;margin:0;padding:32px;background:#f7f7fb;color:#0b0b0b}
-    .wrap{max-width:860px;margin:0 auto;background:#fff;padding:28px;border-radius:10px;box-shadow:0 6px 18px rgba(12,12,30,0.06)}
-    h1{margin-top:0}
-    p{line-height:1.55}
-    small{color:#6b6b7a}
+    :root{--bg:#f6f7fb;--card:#ffffff;--text:#0b0b0b;--muted:#6b6b7a}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:900px;margin:40px auto;padding:28px;background:var(--card);border-radius:12px;box-shadow:0 10px 30px rgba(8,9,24,0.06)}
+    h1{margin:0 0 8px;font-size:28px}
+    h2{margin-top:18px;font-size:18px}
+    p{line-height:1.6;margin:10px 0}
+    code{background:#f2f4fb;padding:2px 6px;border-radius:6px;font-size:90%}
+    .muted{color:var(--muted)}
+    footer{margin-top:22px;font-size:13px;color:var(--muted)}
+    a{color:inherit;text-decoration:underline}
+    .small{font-size:13px}
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <main class="wrap" role="main">
     <h1>WebShield — Privacy Policy</h1>
-    <p>Last updated: <strong>October 28, 2025</strong></p>
-    <p>WebShield is an extension by Emir Abdullah Alakus. This page explains what data (if any) WebShield collects and how it is used.</p>
+    <p class="muted">Effective date: <strong>October 28, 2025</strong></p>
+
+    <p>WebShield (the "Extension") is developed and maintained by Emir Abdullah Alakus (<a href="https://github.com/Abdullah-js">github.com/Abdullah-js</a>). This Privacy Policy explains what information the Extension collects (if any), how it is used, and how you can contact the developer.</p>
+
+    <h2>Summary (short)</h2>
+    <p>WebShield does not collect or transmit personally identifiable information by default. Settings and preferences are stored locally in your browser using Chrome's storage API. Any optional feature that requires remote resources or data transfer will be explicit in the UI and require your consent prior to usage.</p>
 
     <h2>Data collection</h2>
-    <p>WebShield stores configuration and preferences locally using Chrome's storage API. By default it does not collect or send personal information to external servers.</p>
+    <p><strong>No automatic personal data collection:</strong> By default, the Extension does not collect, upload, or store personal data to any remote server. The Extension runs locally in your browser and uses local storage only for configuration and preferences.</p>
 
-    <h2>Optional server communication</h2>
-    <p>If you enable any optional features that require remote resources (for example, pattern updates or remote analytics), WebShield will request only the minimal data necessary (non-identifying usage metrics) and will clearly request your consent within the extension UI.</p>
+    <h2>Local storage and what is stored</h2>
+    <p>The Extension stores non-sensitive configuration values and small preferences (for example: toggles you enable, domain trust lists, UI preferences). These are stored using Chrome's local storage (`chrome.storage.local`) and are kept on the user's device.</p>
 
-    <h2>Third-party links</h2>
-    <p>WebShield may include links to external sites (e.g. Ko-fi). These links open external pages — WebShield is not responsible for third-party privacy practices.</p>
+    <h2>Optional remote features (explicit opt-in)</h2>
+    <p>If you choose to enable optional features that require remote access (for example, pattern updates, optional cloud-sync, or anonymous analytics), the Extension will:</p>
+    <ul>
+      <li>Ask for your explicit consent before enabling the feature;</li>
+      <li>Describe exactly what data is sent and why;</li>
+      <li>Allow you to disable the feature and delete any remote data that was created under that feature.</li>
+    </ul>
+
+    <h2>Third-party links and services</h2>
+    <p>WebShield may include links to external sites (for example, Ko-fi). Clicking an external link will open that site in a new tab. We do not control third-party privacy practices; please review their privacy policies separately.</p>
+
+    <h2>Cookies and similar technologies</h2>
+    <p>The Extension does not set or rely on browser cookies for user tracking. Any website you visit may set cookies independent of this Extension.</p>
+
+    <h2>Security</h2>
+    <p>We follow best-effort security practices: code runs within the extension context, remote requests (if any) use HTTPS, and sensitive patterns/data should be kept server-side if you enable server sync. However, no system is perfectly secure — treat the Extension and any optional remote features with appropriate caution.</p>
+
+    <h2>Retention</h2>
+    <p>Local settings are retained until you uninstall the Extension or clear your browser data. Any optional remote data (if you opt-in) is retained according to the description you are shown when you enable that feature; you may request deletion where applicable.</p>
+
+    <h2>Children</h2>
+    <p>The Extension is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>Legal disclaimers & limitation of liability</h2>
+    <p>The Extension is provided "as-is". While we aim to provide useful protection against malicious overlays and click-traps, no extension can guarantee 100% protection. By using WebShield you acknowledge and agree that:</p>
+    <ul>
+      <li>The developer is not responsible for any direct, indirect, incidental, consequential, or special damages resulting from use of the Extension, including but not limited to lost data, lost profits, or interruptions to browsing experience;</li>
+      <li>The Extension does not assume liability for third-party sites or services accessed via links from the Extension;</li>
+      <li>Use of the Extension is at your own risk; the developer’s aggregate liability (if any) is limited to the extent permitted by applicable law.</li>
+    </ul>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this page occasionally. When material changes are made, the page's <strong>Effective date</strong> will be updated. Continued use of the Extension after changes implies acceptance of the updated policy.</p>
 
     <h2>Contact</h2>
-    <p>If you have questions about this policy, contact: <strong>abdullah@yourdomain.com</strong> or open an issue at the project's GitHub repository.</p>
+    <p>If you have questions, concerns, or requests about this policy or the Extension, contact: <strong>abdullah@yourdomain.com</strong> or open an issue at the project's repository: <a href="https://github.com/Abdullah-js/WebShield">github.com/Abdullah-js/WebShield</a>.</p>
 
-    <small>Note: This is a concise privacy summary for the Chrome Web Store. If your extension later collects identifiable data, update this page accordingly.</small>
-  </div>
+    <footer class="small muted">
+      This privacy summary is intended for the Chrome Web Store and general users. If you add features that collect identifiable data, update this policy before publishing or after the change.
+    </footer>
+  </main>
 </body>
 </html>
+
